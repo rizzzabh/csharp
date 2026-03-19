@@ -2,10 +2,10 @@ using Microsoft.VisualBasic;
 
 public class CheckoutController
 {
-    private readonly ItemRepository _repository;
+    private readonly IItemRepository _repository;
     private readonly DiscountFactory _factory;
 
-    public CheckoutController(ItemRepository repository, DiscountFactory factory)
+    public CheckoutController(IItemRepository repository, DiscountFactory factory)
     {
         _repository = repository;
         _factory = factory;

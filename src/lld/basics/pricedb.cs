@@ -1,5 +1,8 @@
-
-public class ItemRepository
+public interface IItemRepository
+{
+    Task<double> GetItemPrice();
+}
+public class ItemRepository : IItemRepository
 {
   public async Task<double> GetItemPrice ()
   {
