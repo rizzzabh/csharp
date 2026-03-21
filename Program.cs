@@ -1,11 +1,14 @@
-﻿public class Program
+﻿using System.Windows.Input;
+
+public class Program
 {
     public static void Main()
     {
-        TextEditor editor = new TextEditor();
-        CSharpLinter linter = new CSharpLinter();
-
-        editor.Attach(linter) ; 
-        editor.Save("helloPath") ;
+        CommandHistory history = new CommandHistory();
+        ICommand command = new TypeTextCommand ("Hello") ;
+        history.ExecuteCommand(command) ; 
+        command = new TypeTextCommand("World") ; 
+        history.ExecuteCommand(command) ; 
+        history.UndoLast() ; 
     }
 }
