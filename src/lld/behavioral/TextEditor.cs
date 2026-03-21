@@ -4,7 +4,7 @@ public class TextEditor
 
   public void Attach(IFileSaveObserver fileSaveObserver)
   { 
-    fileSaveObservers.Add(fileSaveObserver) ; 
+    _fileSaveObservers.Add(fileSaveObserver) ; 
   }
   public void Save (string fileName)
   {

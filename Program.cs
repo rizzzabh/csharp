@@ -1,12 +1,11 @@
-﻿string discountCode = "FesTivAl" ; 
+﻿public class Program
+{
+    public static void Main()
+    {
+        TextEditor editor = new TextEditor();
+        CSharpLinter linter = new CSharpLinter();
 
-DiscountFactory discountFactory = new DiscountFactory() ; 
-
-
-IDiscountStrategy discountStrategy = discountFactory.GetDiscountStrategy(discountCode) ;
-
-DiscountCalculator discountCalculator = new DiscountCalculator(discountStrategy) ; 
-
-double finalPrice = discountCalculator.CalculateFinalPrice(200) ; 
-
-Console.WriteLine(finalPrice) ; 
+        editor.Attach(linter) ; 
+        editor.Save("helloPath") ;
+    }
+}

@@ -1,6 +1,6 @@
 using System.Data.Common;
 using System.Net;
-enum Status
+public enum Statusu
   {
     Accepted , 
     Declined , 
@@ -15,5 +15,5 @@ public class MeetingAttendee
 
   public int MeetingId {get ; set ; }
 
-  public Status RSVPStatus {get ; set ; }
+  public Statusu RSVPStatus {get ; set ; }
 }

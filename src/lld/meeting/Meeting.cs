@@ -1,5 +1,5 @@
 
-enum Status
+public enum Status
 {
   Scheduled,
   Canceled,
@@ -8,7 +8,7 @@ enum Status
 public class Meeting
 {
   public int Id {get ; set ; }
-  public string Name {get ; set ; }
+  public required string Name {get ; set ;}
 
   public DateTime StartTime {get ; set ; }
 
