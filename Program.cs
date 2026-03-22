@@ -1,14 +1,12 @@
-﻿using System.Windows.Input;
-
-public class Program
+﻿public class Program
 {
     public static void Main()
     {
-        CommandHistory history = new CommandHistory();
-        ICommand command = new TypeTextCommand ("Hello") ;
-        history.ExecuteCommand(command) ; 
-        command = new TypeTextCommand("World") ; 
-        history.ExecuteCommand(command) ; 
-        history.UndoLast() ; 
+        VSCodeExtension extension = new VSCodeExtension(new Downloading());
+        extension.Disable(); 
+        Console.WriteLine("\n--- State Transition ---");
+        extension.ChangeState(new Running());
+        
+        extension.Disable();
     }
 }
