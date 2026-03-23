@@ -9,3 +9,5 @@ public class User
   public ICollection<MeetingAttendee> MeetingAttendees {get ; set ; } = new List<MeetingAttendee>() ; 
 
 }
+
+
